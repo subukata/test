@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="生方誠希の個人ホームページ。大阪公立大学の准教授で、情報通信・ソフトコンピューティングなどの研究を行っています。">
   <title>Seiki Ubukata</title>
   <!-- Google Fonts: Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +13,13 @@
     :root {
       --bg-color: #121212;
       --text-color: #e0e0e0;
-      --accent-color: #1e88e5; 
-      --header-footer-bg: #121212; 
+      --accent-color: #1e88e5;
+      --header-footer-bg: #121212;
       --link-color: var(--accent-color);
       --section-bg: #1e1e1e;
     }
-    /* リセット */
-    * {
+    /* Reset */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -34,17 +35,19 @@
       padding: 1rem;
       text-align: center;
     }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
     header h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
     }
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
-    }
-    nav li {
-      margin: 0 1rem;
+      gap: 1rem;
     }
     nav a {
       color: var(--link-color);
@@ -65,24 +68,19 @@
       background-color: var(--section-bg);
       border-radius: 8px;
     }
-    h2 {
+    section h2 {
       border-bottom: 1px solid var(--accent-color);
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
     .profile-item {
       margin-bottom: 0.8rem;
+      font-size: 1rem;
     }
     .profile-item span {
       font-weight: bold;
     }
-    footer p {
-      font-size: 0.9rem;
-    }
-    a {
-      color: var(--link-color);
-    }
-    /* カードデザインのスタイル */
     .profile-card {
       background: linear-gradient(135deg, var(--section-bg), #1e1e1e);
       padding: 2rem;
@@ -98,8 +96,8 @@
     .profile-card .name {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      color: #ffffff;
       font-weight: 700;
+      color: #ffffff;
     }
     .profile-card p {
       margin: 0.5rem 0;
@@ -108,8 +106,20 @@
     }
     .profile-card p.position {
       font-weight: bold;
-      color: #d0d0d0;
       margin-top: 1rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      nav ul {
+        gap: 2rem;
+      }
     }
   </style>
 </head>
@@ -130,27 +140,24 @@
     <section id="profile">
       <h2>プロフィール</h2>
       <div class="profile-card">
-        <h1 class="name">生方 誠希</h1>
+        <h2 class="name">生方 誠希</h2>
         <p class="institution">大阪公立大学</p>
         <p class="department">大学院情報学研究科 基幹情報学専攻</p>
         <p class="faculty">工学部 情報工学科</p>
         <p class="position">准教授</p>
       </div>
       <div class="profile-item"><span>キャンパス:</span> 中百舌鳥キャンパス</div>
-      <div class="profile-item"><span>取得学位:</span> 
-        博士（情報科学） （北海道大学）、
-        修士（情報科学） （北海道大学）、
-        学士（工学） （北海道大学）</div>
+      <div class="profile-item">
+        <span>取得学位:</span> 博士（情報科学）（北海道大学）、修士（情報科学）（北海道大学）、学士（工学）（北海道大学）
+      </div>
       <div class="profile-item"><span>研究分野:</span> 情報通信 / ソフトコンピューティング、感性情報学、知能情報学</div>
     </section>
-    
     <!-- 研究概要 -->
     <section id="research">
       <h2>研究概要</h2>
       <div class="profile-item"><span>研究テーマ:</span> 不確実性を考慮したクラスタリング手法の開発</div>
       <div class="profile-item"><span>研究歴:</span> 知的データ解析、ソフトコンピューティング、クラスタリング、感性情報学</div>
     </section>
-    
     <!-- 所属学協会 -->
     <section id="affiliations">
       <h2>所属学協会</h2>
@@ -159,12 +166,16 @@
       <div class="profile-item"><span>システム制御情報学会:</span> 2015年04月 - 継続中</div>
       <div class="profile-item"><span>IEEE:</span> 2015年08月 - 継続中</div>
     </section>
-    
     <!-- 連絡先 -->
     <section id="contact">
       <h2>連絡先</h2>
-      <div class="profile-item"><span>E-mail: </span>ubukata@omu.ac.jp</div>
-      <div class="profile-item"><span>ホームページ: </span><a href="https://www.omu.ac.jp/i/ci/profs/ubukata/" target="_blank">https://www.omu.ac.jp/i/ci/profs/ubukata/</a></div>
+      <div class="profile-item">
+        <span>E-mail:</span> <a href="mailto:ubukata@omu.ac.jp">ubukata@omu.ac.jp</a>
+      </div>
+      <div class="profile-item">
+        <span>ホームページ:</span> 
+        <a href="https://www.omu.ac.jp/i/ci/profs/ubukata/" target="_blank" rel="noopener">https://www.omu.ac.jp/i/ci/profs/ubukata/</a>
+      </div>
     </section>
   </main>
   <footer>
