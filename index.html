@@ -108,6 +108,23 @@
       font-weight: bold;
       margin-top: 1rem;
     }
+    .degree-list {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 0.5rem;
+	  margin-top: 0.5rem;
+	}
+	.degree-item {
+	  background-color: var(--section-bg);
+	  padding: 0.5rem 1rem;
+	  border-radius: 12px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	  font-size: 1rem;
+	  font-weight: bold;
+	  color: var(--text-color);
+	  text-align: center;
+	}
+    
     footer p {
       font-size: 0.9rem;
     }
@@ -148,8 +165,13 @@
       </div>
       <div class="profile-item"><span>キャンパス:</span> 中百舌鳥キャンパス</div>
       <div class="profile-item">
-        <span>取得学位:</span> 博士（情報科学）（北海道大学），修士（情報科学）（北海道大学），学士（工学）（北海道大学）
-      </div>
+		  <span>取得学位:</span>
+		  <div class="degree-list">
+		    <div class="degree-item">博士（情報科学）（北海道大学）</div>
+		    <div class="degree-item">修士（情報科学）（北海道大学）</div>
+		    <div class="degree-item">学士（工学）（北海道大学）</div>
+		  </div>
+		</div>
       <div class="profile-item"><span>研究分野: </span> 情報通信/ソフトコンピューティング，感性情報学，知能情報学</div>
       <div class="profile-item"><span>略歴: </span> 
       	北海道大学工学部卒業(2007)，大学院情報科学研究科修士課程修了(2009)，博士課程単位修得退学(2014)．
@@ -158,20 +180,29 @@
         IEEE CIS Japan Chapter Young Researcher Award (2015)，JACIII Young Researcher Award (2019)，日本知能情報ファジィ学会よりEmerging Research Leader Award (2024)等受賞．</div>
     </section>
     <!-- 研究概要 -->
-    <section id="research">
-      <h2>研究概要</h2>
-      <div class="profile-item"><span>研究分野: </span> 知的データ解析、ソフトコンピューティング、クラスタリング、感性情報学</div>
-      <div class="profile-item"><span>研究テーマ: </span> 不確実性を考慮したクラスタリング手法の開発</div>
-    </section>
+      <section id="research">
+		  <h2>研究概要</h2>
+		  <div class="profile-item"><span>研究分野:</span>
+		    <div class="degree-list">
+		      <div class="degree-item">知的データ解析</div>
+		      <div class="degree-item">ソフトコンピューティング</div>
+		      <div class="degree-item">クラスタリング</div>
+		      <div class="degree-item">感性情報学</div>
+		    </div>
+		  </div>
+		  <div class="profile-item"><span>研究テーマ:</span> 不確実性を考慮したクラスタリング手法の開発</div>
+		</section>
     <!-- 所属学協会 -->
-    <section id="affiliations">
-      <h2>所属学協会</h2>
-      <div class="profile-item"><span>日本知能情報ファジィ学会: </span> 2008年07月 - 継続中</div>
-      <div class="profile-item"><span>日本感性工学会: </span> 2013年01月 - 継続中</div>
-      <div class="profile-item"><span>システム制御情報学会: </span> 2015年04月 - 継続中</div>
-      <div class="profile-item"><span>IEEE: </span> 2015年08月 - 継続中</div>
-      <div class="profile-item"><span>人工知能学会: </span> 2025年01月 - 継続中</div>
-    </section>
+	<section id="affiliations">
+	  <h2>所属学協会</h2>
+	  <div class="degree-list">
+	    <div class="degree-item">日本知能情報ファジィ学会 (2008.7-)</div>
+	    <div class="degree-item">日本感性工学会 (2013.1-)</div>
+	    <div class="degree-item">システム制御情報学会 (2015.4-)</div>
+	    <div class="degree-item">IEEE (2015.8-)</div>
+	    <div class="degree-item">人工知能学会 (2025.1-)</div>
+	  </div>
+	</section>
     <!-- 連絡先 -->
     <section id="contact">
       <h2>連絡先</h2>
